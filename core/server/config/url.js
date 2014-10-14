@@ -100,6 +100,10 @@ function urlPathForPost(post, permalinks) {
 // - absolute (optional, default:false) - boolean whether or not the url should be absolute
 // This is probably not the right place for this, but it's the best place for now
 function urlFor(context, data, absolute) {
+    if (context === 'rss') {
+        return 'http://feed.netputer.me/';
+    }
+
     var urlPath = '/',
         secure,
         knownObjects = ['post', 'tag', 'author'],
