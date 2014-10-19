@@ -521,6 +521,10 @@ coreHelpers.ghost_head = function (options) {
             }
         }
 
+        if (isProduction) {
+            head.push('<base href="//dn-netputer.qbox.me/">');
+        }
+
         return filters.doFilter('ghost_head', head);
     }).then(function (head) {
         var headString = _.reduce(head, function (memo, item) { return memo + '\n' + item; }, '');
