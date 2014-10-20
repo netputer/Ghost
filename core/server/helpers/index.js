@@ -91,7 +91,7 @@ coreHelpers.encode = function (context, str) {
 //
 coreHelpers.page_url = function (context, block) {
     /*jshint unused:false*/
-    var url = config.paths.subdir;
+    var url = config.url + config.paths.subdir;
 
     if (this.tagSlug !== undefined) {
         url += '/tag/' + this.tagSlug;
