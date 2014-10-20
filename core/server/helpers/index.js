@@ -214,7 +214,7 @@ coreHelpers.author = function (context, options) {
     if (this.author && this.author.name) {
         if (autolink) {
             output = linkTemplate({
-                url: config.urlFor('author', {author: this.author}),
+                url: config.urlFor('author', {author: this.author}, true),
                 text: _.escape(this.author.name)
             });
         } else {
@@ -252,7 +252,7 @@ coreHelpers.tags = function (options) {
         if (autolink) {
             return _.map(tags, function (tag) {
                 return linkTemplate({
-                    url: config.urlFor('tag', {tag: tag}),
+                    url: config.urlFor('tag', {tag: tag}, true),
                     text: _.escape(tag.name)
                 });
             }).join(separator);
