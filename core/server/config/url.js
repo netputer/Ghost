@@ -145,7 +145,7 @@ function urlFor(context, data, absolute) {
     // this will become really big
     knownPaths = {
         home: '/',
-        rss: '/rss/',
+        rss: 'http://feed.netputer.me/',
         api: '/ghost/api/v0.1',
         sitemap_xsl: '/sitemap.xsl'
     };
